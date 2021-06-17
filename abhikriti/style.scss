@@ -1,0 +1,59 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+}
+
+body{
+    
+    background-color: rgb(32, 32, 32);
+}
+
+.test-section{
+    height: 100vh;
+}
+
+.stage_backdrop{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    padding: 30px;
+    justify-content: center;
+    align-items: center;
+    .img1-cont{
+        z-index: 10;
+    position: relative;
+        #img1{
+            width: 100%;
+            height: auto;
+        }
+        margin-right: 10px;
+        #arr1{
+            width: 20%;
+            position: absolute;
+            right: -10%;
+            bottom: 15%;
+            overflow: hidden;
+        }
+    }
+    p{
+        display: flex;
+        width: 20%;
+    }
+}
+
+@media screen and ( max-width:867px) {
+    .stage_backdrop{
+        flex-direction: column;
+        .img1-cont{
+            #arr1{
+                right: 20%;
+                bottom: -15%;
+                }
+            }
+        }
+        p{
+            width: 40%;
+        }
+}
