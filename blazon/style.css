@@ -283,7 +283,7 @@ section {
   height: 100%;
   z-index: -10;
   position: absolute;
-  background: url(/blazon/assets/images/bg-clear.png) no-repeat center center;
+  background: url(assets/images/bg-clear.png) no-repeat center center;
   background-size: cover;
 }
 
