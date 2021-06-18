@@ -259,7 +259,7 @@ section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  min-height: 90vh;
+  min-height: 50vh;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -338,7 +338,7 @@ section {
 
 #intro .tag-info-mobile {
   display: none;
-  margin: -20px 30px 50px;
+  margin: -50px 30px 50px;
   font-size: 12px;
   font-weight: 300;
   line-height: 14px;
