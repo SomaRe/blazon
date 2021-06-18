@@ -7,7 +7,7 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -89,6 +89,8 @@ a {
 
 nav {
   z-index: 100;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
   position: fixed;
   top: 0;
   width: 100%;
@@ -204,6 +206,53 @@ nav .menu-btn.open .menu-btn__burger::before {
 nav .menu-btn.open .menu-btn__burger::after {
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
+}
+
+.nav-mobile {
+  position: fixed;
+  inset: 0;
+  height: 100vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: linear-gradient(250deg, #124bff, #31fbe6, #31fb9a);
+  background-size: 1000% 1000%;
+  -webkit-animation: bg-color 5s linear infinite;
+          animation: bg-color 5s linear infinite;
+  z-index: 10;
+  -webkit-clip-path: circle(1px at calc(100% - 45px) 5%);
+          clip-path: circle(1px at calc(100% - 45px) 5%);
+  -webkit-transition: -webkit-clip-path 0.5s ease-out;
+  transition: -webkit-clip-path 0.5s ease-out;
+  transition: clip-path 0.5s ease-out;
+  transition: clip-path 0.5s ease-out, -webkit-clip-path 0.5s ease-out;
+}
+
+.nav-mobile ul {
+  text-align: center;
+  margin: 10vh 0 5vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.nav-mobile ul li {
+  list-style: none;
+}
+
+.open {
+  -webkit-clip-path: circle(200% at calc(100% - 45px) 5%);
+          clip-path: circle(200% at calc(100% - 45px) 5%);
 }
 
 section {
@@ -331,11 +380,13 @@ section {
   display: flex;
 }
 
-#about .col .numbers-wrapper .col1, #about .col .numbers-wrapper .col2 {
+#about .col .numbers-wrapper .col1,
+#about .col .numbers-wrapper .col2 {
   width: 50%;
 }
 
-#about .col .numbers-wrapper .col1 .number, #about .col .numbers-wrapper .col2 .number {
+#about .col .numbers-wrapper .col1 .number,
+#about .col .numbers-wrapper .col2 .number {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -347,12 +398,14 @@ section {
   margin-top: 30px;
 }
 
-#about .col .numbers-wrapper .col1 .number span, #about .col .numbers-wrapper .col2 .number span {
+#about .col .numbers-wrapper .col1 .number span,
+#about .col .numbers-wrapper .col2 .number span {
   font-size: 14px;
   opacity: 0.6;
 }
 
-#about .col .numbers-wrapper .col1 .line, #about .col .numbers-wrapper .col2 .line {
+#about .col .numbers-wrapper .col1 .line,
+#about .col .numbers-wrapper .col2 .line {
   margin-top: 30px;
   display: block;
   height: 3px;
@@ -362,7 +415,8 @@ section {
           animation: gradient-line 7s linear infinite;
 }
 
-#about .col .numbers-wrapper .col1 .number2, #about .col .numbers-wrapper .col2 .number2 {
+#about .col .numbers-wrapper .col1 .number2,
+#about .col .numbers-wrapper .col2 .number2 {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -376,7 +430,8 @@ section {
           justify-content: space-between;
 }
 
-#about .col .numbers-wrapper .col1 .number2 .number:nth-child(2), #about .col .numbers-wrapper .col2 .number2 .number:nth-child(2) {
+#about .col .numbers-wrapper .col1 .number2 .number:nth-child(2),
+#about .col .numbers-wrapper .col2 .number2 .number:nth-child(2) {
   margin-right: 50px;
 }
 
@@ -663,7 +718,8 @@ section {
           animation: gradient-line 7s linear infinite;
 }
 
-#contact .contact-wrapper .contact-info .email, #contact .contact-wrapper .contact-info .phone {
+#contact .contact-wrapper .contact-info .email,
+#contact .contact-wrapper .contact-info .phone {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -673,7 +729,8 @@ section {
   padding: 20px;
 }
 
-#contact .contact-wrapper .contact-info .email img, #contact .contact-wrapper .contact-info .phone img {
+#contact .contact-wrapper .contact-info .email img,
+#contact .contact-wrapper .contact-info .phone img {
   padding: 10px;
   border-radius: 10px;
   -webkit-transform: scale(0.7);
@@ -684,7 +741,8 @@ section {
           animation: gradient-line 7s linear infinite;
 }
 
-#contact .contact-wrapper .contact-info .email p, #contact .contact-wrapper .contact-info .phone p {
+#contact .contact-wrapper .contact-info .email p,
+#contact .contact-wrapper .contact-info .phone p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -694,7 +752,8 @@ section {
           flex-direction: column;
 }
 
-#contact .contact-wrapper .contact-info .email p span, #contact .contact-wrapper .contact-info .phone p span {
+#contact .contact-wrapper .contact-info .email p span,
+#contact .contact-wrapper .contact-info .phone p span {
   font-size: 24px;
   color: white;
 }
@@ -838,10 +897,12 @@ footer {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  #about .col .numbers-wrapper .col1, #about .col .numbers-wrapper .col2 {
+  #about .col .numbers-wrapper .col1,
+  #about .col .numbers-wrapper .col2 {
     width: 100%;
   }
-  #about .col .numbers-wrapper .col1 .number, #about .col .numbers-wrapper .col2 .number {
+  #about .col .numbers-wrapper .col1 .number,
+  #about .col .numbers-wrapper .col2 .number {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -855,11 +916,13 @@ footer {
     font-size: 50px;
     margin-top: 30px;
   }
-  #about .col .numbers-wrapper .col1 .number span, #about .col .numbers-wrapper .col2 .number span {
+  #about .col .numbers-wrapper .col1 .number span,
+  #about .col .numbers-wrapper .col2 .number span {
     font-size: 14px;
     opacity: 0.6;
   }
-  #about .col .numbers-wrapper .col1 .line, #about .col .numbers-wrapper .col2 .line {
+  #about .col .numbers-wrapper .col1 .line,
+  #about .col .numbers-wrapper .col2 .line {
     margin-top: 30px;
     display: block;
     height: 3px;
@@ -868,7 +931,8 @@ footer {
     -webkit-animation: gradient-line 7s linear infinite;
             animation: gradient-line 7s linear infinite;
   }
-  #about .col .numbers-wrapper .col1 .number2, #about .col .numbers-wrapper .col2 .number2 {
+  #about .col .numbers-wrapper .col1 .number2,
+  #about .col .numbers-wrapper .col2 .number2 {
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -881,7 +945,8 @@ footer {
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
-  #about .col .numbers-wrapper .col1 .number2 .number:nth-child(2), #about .col .numbers-wrapper .col2 .number2 .number:nth-child(2) {
+  #about .col .numbers-wrapper .col1 .number2 .number:nth-child(2),
+  #about .col .numbers-wrapper .col2 .number2 .number:nth-child(2) {
     margin-right: 50px;
   }
   #about .col .numbers-wrapper .col2 {
@@ -1052,7 +1117,8 @@ footer {
   #contact .contact-wrapper .contact-info {
     margin-top: 30px;
   }
-  #contact .contact-wrapper .contact-info .email, #contact .contact-wrapper .contact-info .phone {
+  #contact .contact-wrapper .contact-info .email,
+  #contact .contact-wrapper .contact-info .phone {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1061,7 +1127,8 @@ footer {
             align-items: center;
     padding: 10px;
   }
-  #contact .contact-wrapper .contact-info .email img, #contact .contact-wrapper .contact-info .phone img {
+  #contact .contact-wrapper .contact-info .email img,
+  #contact .contact-wrapper .contact-info .phone img {
     padding: 10px;
     border-radius: 10px;
     -webkit-transform: scale(0.6);
@@ -1071,7 +1138,8 @@ footer {
     -webkit-animation: gradient-line 7s linear infinite;
             animation: gradient-line 7s linear infinite;
   }
-  #contact .contact-wrapper .contact-info .email p, #contact .contact-wrapper .contact-info .phone p {
+  #contact .contact-wrapper .contact-info .email p,
+  #contact .contact-wrapper .contact-info .phone p {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1080,11 +1148,13 @@ footer {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  #contact .contact-wrapper .contact-info .email p span, #contact .contact-wrapper .contact-info .phone p span {
+  #contact .contact-wrapper .contact-info .email p span,
+  #contact .contact-wrapper .contact-info .phone p span {
     font-size: 22px;
     color: white;
   }
-  #contact .contact-wrapper .contact-info .email p a, #contact .contact-wrapper .contact-info .phone p a {
+  #contact .contact-wrapper .contact-info .email p a,
+  #contact .contact-wrapper .contact-info .phone p a {
     font-size: 14px;
   }
 }

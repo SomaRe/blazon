@@ -1,27 +1,28 @@
 const menuBtn = document.querySelector(".menu-btn");
-const menuOpen = document.querySelector(".menu-open");
-const mo = document.querySelectorAll(".mo");
+const menuOpen = document.querySelector(".nav-mobile");
+const mobileLinks = document.querySelectorAll(".nav-mobile ul li");
 let Open = false;
 menuBtn.addEventListener("click", () => {
   if (!Open) {
     Open = true;
     menuBtn.classList.add("open");
-    menuOpen.classList.add("opened");
+    menuOpen.classList.add("open");
     let delay = 0;
-    mo.forEach(function (e) {
-      e.classList.add("mo-slide");
-      e.style.transitionDelay = delay + "ms";
-      delay = delay + 150;
-    });
   } else {
     Open = false;
     menuBtn.classList.remove("open");
-    menuOpen.classList.remove("opened");
-    mo.forEach(function (e) {
-      e.classList.remove("mo-slide");
-    });
+    menuOpen.classList.remove("open")
   }
 });
+
+mobileLinks.forEach( el => {
+  el.addEventListener("click", () => {
+    menuBtn.classList.remove("open");
+    menuOpen.classList.remove("open");
+  })
+});
+
+
 
 //smooth scrolling
 const links = document.querySelectorAll("nav ul li a");
