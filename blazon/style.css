@@ -411,7 +411,7 @@ section {
 
 #intro .tag-info-mobile {
   display: none;
-  margin: -50px 30px 50px;
+  margin: -50px 30px 100px;
   font-size: 12px;
   font-weight: 300;
   line-height: 14px;
