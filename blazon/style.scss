@@ -238,7 +238,7 @@ section {
 }
 
 #intro {
-  margin-top: 10vh;
+  margin: 10vh 0;
   height: 90vh;
   .info {
     margin-left: 30px;
@@ -305,6 +305,7 @@ section {
 }
 
 #about {
+  padding: 50px 0;
   background-color: black;
   color: white;
   letter-spacing: 2px;
@@ -379,8 +380,7 @@ section {
 #services {
   flex-direction: column;
   justify-content: space-around;
-  padding: 0px 50px;
-  margin: 50px 0;
+  padding: 100px 50px;
   .services-info {
     h1 {
       font-size: 50px;
@@ -420,7 +420,7 @@ section {
   }
   background-color: black;
   color: white;
-  padding: 50px 50px;
+  padding: 100px 50px;
   justify-content: space-between;
   align-items: center;
   .team-info {
@@ -442,9 +442,8 @@ section {
 }
 
 #motivation {
-  padding: 0 50px;
+  padding: 100px 50px;
   align-items: center;
-  margin: 50px 0;
   .motivation-wrapper {
     width: 50%;
     margin-right: 50px;
@@ -539,11 +538,11 @@ section {
 #contact {
   background-color: black;
   color: white;
-  padding: 50px;
+  padding: 100px 50px;
   flex-direction: column;
   h1 {
     font-size: 50px;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
     text-align: center;
   }
   .contact-wrapper {
@@ -558,6 +557,10 @@ section {
       animation: gradient-line 7s linear infinite;
     }
     .contact-info {
+      a{
+        text-decoration: none;
+        color: white;
+      }
       .email,
       .phone {
         display: flex;
