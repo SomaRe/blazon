@@ -337,8 +337,8 @@ section {
 }
 
 #intro {
-  margin: 10vh 0 50px;
-  height: 80vh;
+  margin: 15vh 0 50px;
+  height: 90vh;
 }
 
 #intro .info {
@@ -986,6 +986,7 @@ footer {
     display: block;
   }
   #intro {
+    height: 80vh;
     margin-top: 15vh;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1017,6 +1018,8 @@ footer {
     font-weight: 300;
     line-height: 14px;
     letter-spacing: 3px;
+    position: relative;
+    top: -30px;
   }
   #about .col {
     display: -webkit-box;
