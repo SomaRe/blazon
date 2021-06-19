@@ -47,8 +47,8 @@ a {
 }
 
 .vanish {
-  -webkit-animation: vanish 0.5s forwards;
-          animation: vanish 0.5s forwards;
+  -webkit-animation: vanish 1s forwards;
+          animation: vanish 1s forwards;
 }
 
 .fullpage-preloader {
@@ -108,9 +108,6 @@ a {
   0% {
     opacity: 1;
   }
-  60% {
-    opacity: 0.6;
-  }
   100% {
     opacity: 0;
     visibility: hidden;
@@ -120,9 +117,6 @@ a {
 @keyframes vanish {
   0% {
     opacity: 1;
-  }
-  60% {
-    opacity: 0.6;
   }
   100% {
     opacity: 0;

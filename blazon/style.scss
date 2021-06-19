@@ -39,7 +39,7 @@ a {
 }
 
 .vanish {
-  animation: vanish 0.5s forwards;
+  animation: vanish 1s forwards;
 }
 
 .fullpage-preloader{
@@ -78,9 +78,6 @@ a {
 @keyframes vanish {
   0%{
     opacity: 1;
-  }
-  60%{
-    opacity: 0.6;
   }
   100% {
     opacity: 0;

@@ -41,7 +41,7 @@ function clickHandler(e) {
 
 window.addEventListener("load", () => {
 
-  document.querySelector(".fullpage-preloader").classList.add(".vanish");
+  document.querySelector(".fullpage-preloader").classList.add("vanish");
 
   document.documentElement.style.setProperty(
     "--animation",
