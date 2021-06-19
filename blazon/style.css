@@ -410,8 +410,10 @@ section {
 }
 
 #intro .tag-info-mobile {
+  position: relative;
+  top: -30px;
   display: none;
-  margin: -50px 30px 100px;
+  margin: -50px 30px 20px;
   font-size: 12px;
   font-weight: 300;
   line-height: 14px;
