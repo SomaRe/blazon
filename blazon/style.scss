@@ -113,10 +113,6 @@
   animation: vanish 1s forwards;
 }
 
-.open {
-  clip-path: circle(200% at calc(100% - 45px) 5%);
-}
-
 //MAIN CLASSES
 nav {
   z-index: 100;
@@ -224,11 +220,16 @@ nav {
       list-style: none;
       a {
         font-weight: bold;
+        text-decoration: none;
+        color: white;
       }
     }
   }
 }
 
+.open {
+  clip-path: circle(200% at calc(100% - 45px) 5%);
+}
 
 section {
   display: flex;

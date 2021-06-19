@@ -152,11 +152,6 @@
           animation: vanish 1s forwards;
 }
 
-.open {
-  -webkit-clip-path: circle(200% at calc(100% - 45px) 5%);
-          clip-path: circle(200% at calc(100% - 45px) 5%);
-}
-
 nav {
   z-index: 100;
   -webkit-transform-style: preserve-3d;
@@ -323,6 +318,13 @@ nav .menu-btn.open .menu-btn__burger::after {
 
 .nav-mobile ul li a {
   font-weight: bold;
+  text-decoration: none;
+  color: white;
+}
+
+.open {
+  -webkit-clip-path: circle(200% at calc(100% - 45px) 5%);
+          clip-path: circle(200% at calc(100% - 45px) 5%);
 }
 
 section {
