@@ -40,6 +40,9 @@ function clickHandler(e) {
 }
 
 window.addEventListener("load", () => {
+
+  document.querySelector(".fullpage-preloader").classList.add(".vanish");
+
   document.documentElement.style.setProperty(
     "--animation",
     "anim1 1s ease-in 1s forwards"

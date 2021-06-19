@@ -20,15 +20,41 @@ a {
 .preloader {
   z-index: 1000;
   position: fixed;
-  top: 0;
+  top: 10vh;
   display: none;
   background-color: black;
-  opacity: 1;
+  opacity: 0.5;
   height: 100vh;
   width: 100%;
   justify-content: center;
   img {
     width: 15vh;
+    animation-duration: 1s;
+    animation-name: changewidth;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    height: auto;
+    object-fit: contain;
+  }
+}
+
+.vanish {
+  animation: vanish 0.5s forwards;
+}
+
+.fullpage-preloader{
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  display: flex;
+  background-color: white;
+  opacity: 1;
+  height: 100vh;
+  width: 100%;
+  justify-content: center;
+  animation: vanish 3s forwards;
+  img {
+    width: 60vh;
     animation-duration: 1s;
     animation-name: changewidth;
     animation-iteration-count: infinite;
@@ -48,11 +74,15 @@ a {
   }
 }
 
-.vanish {
-  animation: vanish 0.5s forwards;
-}
+
 
 @keyframes vanish {
+  0%{
+    opacity: 1;
+  }
+  90%{
+    opacity: 0.9;
+  }
   100% {
     opacity: 0;
     visibility: hidden;
@@ -178,6 +208,7 @@ section {
 
 #intro {
   margin-top: 10vh;
+  height: 90vh;
   .info {
     margin-left: 30px;
     display: flex;
@@ -329,6 +360,7 @@ section {
     }
   }
   .services-wrapper {
+    margin-top: 50px;
     display: flex;
     justify-content: space-between;
     .services {
@@ -357,7 +389,7 @@ section {
   }
   background-color: black;
   color: white;
-  padding: 0 50px;
+  padding: 50px 50px;
   justify-content: space-between;
   align-items: center;
   .team-info {
@@ -532,7 +564,7 @@ footer {
     transform: translateX(0);
   }
   to {
-    transform: translate(-100%);
+    transform: translateX(-100%);
   }
 }
 
