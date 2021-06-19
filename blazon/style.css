@@ -68,7 +68,7 @@ a {
 }
 
 .fullpage-preloader img {
-  width: 60vh;
+  width: 15vh;
   -webkit-animation-duration: 1s;
           animation-duration: 1s;
   -webkit-animation-name: changewidth;
