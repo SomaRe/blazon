@@ -65,8 +65,6 @@ a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-animation: vanish 3s forwards;
-          animation: vanish 3s forwards;
 }
 
 .fullpage-preloader img {
