@@ -1,3 +1,5 @@
+const popup = document.querySelector(".pop-up-wrapper");
+
 const menuBtn = document.querySelector(".menu-btn");
 const menuOpen = document.querySelector(".nav-mobile");
 const mobileLinks = document.querySelectorAll(".nav-mobile ul li");
@@ -42,6 +44,14 @@ function clickHandler(e) {
 window.addEventListener("load", () => {
 
   document.querySelector(".fullpage-preloader").classList.add("vanish");
+
+  setTimeout(() => {
+  popup.style.display="flex";
+  }, 3000);
+
+  document.querySelector(".pop-up-wrapper span").addEventListener('click', () =>{
+    popup.classList.add("vanish");
+  });
 
   document.documentElement.style.setProperty(
     "--animation",

@@ -12,9 +12,58 @@
   box-sizing: border-box;
 }
 
-a {
-  text-decoration: none;
-  color: white;
+// All the Overlays
+.pop-up-wrapper {
+  z-index: 1000;
+  position: fixed;
+  inset: 0;
+  display: none;
+  height: 100vh;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.9);
+  .pop-up {
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+    width: clamp(10%, 600px, 80%);
+    background-color: #2cd4c4;
+    text-align: center;
+    font-weight: 500;
+    color: white;
+    animation: popup 1s forwards;
+    .alert-circle {
+      transform: scale(1.5);
+    }
+    p {
+      margin-top: 50px;
+      font-size: clamp(14px, 3vmax, 28px);
+      border: white 3px solid;
+      padding: 10px;
+      border-radius: 20px;
+      cursor: pointer;
+      a{
+        color: white;
+        text-decoration: none;
+      }
+      &:hover {
+        background-color: white;
+      }
+      &:hover a {
+        color: #2cd4c4;
+      }
+    }
+    span {
+      font-size: clamp(11px, 1.5vmax, 14px);
+      margin-top: 10px;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
 }
 
 .preloader {
@@ -38,12 +87,8 @@ a {
   }
 }
 
-.vanish {
-  animation: vanish 1s forwards;
-}
-
-.fullpage-preloader{
-  z-index: 1000;
+.fullpage-preloader {
+  z-index: 10000;
   position: fixed;
   top: 0;
   display: flex;
@@ -63,31 +108,19 @@ a {
   }
 }
 
-@keyframes changewidth {
-  from {
-    transform: scale(1);
-  }
-
-  to {
-    transform: scale(1.2);
-  }
+// ACTION CLASSES
+.vanish {
+  animation: vanish 1s forwards;
 }
 
-
-
-@keyframes vanish {
-  0%{
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-    visibility: hidden;
-  }
+.open {
+  clip-path: circle(200% at calc(100% - 45px) 5%);
 }
 
+//MAIN CLASSES
 nav {
-  z-index: 100; 
-  transform-style:preserve-3d;
+  z-index: 100;
+  transform-style: preserve-3d;
   position: fixed;
   top: 0;
   width: 100%;
@@ -120,6 +153,7 @@ nav {
       margin-right: 30px;
       a {
         color: black;
+        text-decoration: none;
       }
     }
   }
@@ -188,13 +222,13 @@ nav {
     justify-content: space-around;
     li {
       list-style: none;
+      a {
+        font-weight: bold;
+      }
     }
   }
 }
 
-.open{
-  clip-path: circle(200% at calc(100% - 45px) 5%);
-}
 
 section {
   display: flex;
@@ -555,6 +589,7 @@ footer {
   text-align: center;
 }
 
+// ALL THE ANIMATIONS
 @keyframes anim1 {
   from {
     transform: translateX(0);
@@ -588,6 +623,39 @@ footer {
   }
 }
 
+@keyframes changewidth {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.2);
+  }
+}
+
+@keyframes popup {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes vanish {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+
+// Mobile Compatibility changes
 @media only screen and (max-width: 768px) {
   h1 {
     font-size: 40px !important;
