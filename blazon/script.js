@@ -25,22 +25,27 @@ mobileLinks.forEach( el => {
 });
 
 
-
-//smooth scrolling
+//smooth scrolling desktop
 const links = document.querySelectorAll("nav ul li a");
-for (const link of links) {
+for (var link of links) {
   link.addEventListener("click", clickHandler);
 }
+
+//smooth scrolling mobile
+const mob_links = document.querySelectorAll(".nav-mobile ul li a");
+for (var link of mob_links) {
+  link.addEventListener("click", clickHandler);
+}
+
 function clickHandler(e) {
   e.preventDefault();
   const href = this.getAttribute("href");
   const offsetTop = document.querySelector(href).offsetTop;
   scroll({
-    top: offsetTop - 20,
+    top: offsetTop - 100,
     behavior: "smooth",
   });
 }
-
 window.addEventListener("load", () => {
 
   document.querySelector(".fullpage-preloader").classList.add("vanish");
