@@ -1,8 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@300;400;500;600&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap");
 
 :root {
   --animation: none;
+  --gradient:linear-gradient(250deg, #FAB579,#ED262C);
 }
 
 * {
@@ -99,10 +100,10 @@
   justify-content: center;
   img {
     width: 15vh;
-    animation-duration: 1s;
-    animation-name: changewidth;
+    animation-duration: 4s;
+    animation-name: rotate;
     animation-iteration-count: infinite;
-    animation-direction: alternate;
+    animation-timing-function: linear;
     height: auto;
     object-fit: contain;
   }
@@ -129,10 +130,8 @@ nav {
   .logo-name {
     display: flex;
     img {
-      height: 20px;
+      height: 30px;
       width: auto;
-      filter: invert(100%);
-      margin-right: 15px;
     }
     p {
       font-size: 18px;
@@ -204,7 +203,7 @@ nav {
   width: 100%;
   display: flex;
   justify-content: center;
-  background: linear-gradient(250deg, #124bff, #31fbe6, #31fb9a);
+  background: var(--gradient);
   background-size: 1000% 1000%;
   animation: bg-color 5s linear infinite;
   z-index: 10;
@@ -239,7 +238,7 @@ section {
 
 #intro {
   margin: 15vh 0 50px;
-  height: 90vh;
+  height: 80vh;
   .info {
     margin-left: 30px;
     display: flex;
@@ -248,10 +247,9 @@ section {
     .tag-line {
       max-width: 30%;
       p {
-        font-family: "Montserrat", sans-serif;
         font-size: 90px;
-        line-height: 100px;
-        letter-spacing: 8px;
+        letter-spacing: 10px;
+        font-weight: 300;
       }
     }
     .tag-info {
@@ -265,9 +263,9 @@ section {
   .img-info {
     position: relative;
     width: 100%;
-    background: linear-gradient(250deg, #124bff, #31fbe6, #31fb9a);
-    background-size: 1000% 1000%;
-    animation: bg-color 7s linear infinite;
+    // background: var(--gradient);
+    // background-size: 500% 500%;
+    // animation: bg-color 7s linear infinite;
     height: auto;
     z-index: -10;
     &::after {
@@ -288,8 +286,7 @@ section {
       height: 100%;
       z-index: -10;
       position: absolute;
-
-      background: url(assets/images/bg-clear.png) no-repeat center center;
+      background: url(assets/images/office-space.jpg) no-repeat center center;
 
       background-size: cover;
     }
@@ -338,9 +335,9 @@ section {
           margin-top: 30px;
           display: block;
           height: 3px;
-          background: linear-gradient(250deg, #124bff, #31fbe6, #31fb9a);
+          background: var(--gradient);
           background-size: 300% 300%;
-          animation: gradient-line 7s linear infinite;
+          animation: gradient-line 3s linear infinite;
         }
         .number2 {
           width: 100%;
@@ -399,9 +396,9 @@ section {
       display: flex;
       flex-direction: column;
       align-items: center;
-      background: linear-gradient(250deg, #3e6bff, #31fb9a);
-      background-size: 500% 500%;
-      animation: gradient-line 10s linear infinite;
+      background: var(--gradient);
+      background-size: 400% 400%;
+      animation: gradient-line 5s linear infinite;
       p {
         margin-top: 20px;
       }
@@ -520,9 +517,9 @@ section {
       font-weight: 500;
       border: none;
       padding: 10px;
-      background: linear-gradient(250deg, #124bff, #31fbe6, #31fb9a);
-      background-size: 300% 300%;
-      animation: gradient-line 7s linear infinite;
+      background: var(--gradient);
+      background-size: 500% 500%;
+      animation: gradient-line 3s linear infinite;
       &:hover {
         animation: gradient-line 1s linear infinite;
       }
@@ -546,10 +543,9 @@ section {
     justify-content: space-around;
     .map {
       padding: 1px;
-      border: 1px solid white;
-      background: linear-gradient(250deg, #124bff, #31fbe6, #31fb9a);
-      background-size: 300% 300%;
-      animation: gradient-line 7s linear infinite;
+      background: var(--gradient);
+      background-size: 500% 500%;
+      animation: gradient-line 3s linear infinite;
     }
     .contact-info {
       a{
@@ -565,9 +561,9 @@ section {
           padding: 10px;
           border-radius: 10px;
           transform: scale(0.7);
-          background: linear-gradient(250deg, #124bff, #31fbe6, #31fb9a);
-          background-size: 300% 300%;
-          animation: gradient-line 7s linear infinite;
+          background: var(--gradient);
+          background-size: 500% 500%;
+          animation: gradient-line 3s linear infinite;
         }
         p {
           display: flex;
@@ -602,7 +598,7 @@ footer {
   0% {
     background-position: 0% 50%;
   }
-  70% {
+  50%{
     background-position: 100% 50%;
   }
   100% {
@@ -614,7 +610,7 @@ footer {
   0% {
     background-position: 0% 50%;
   }
-  70% {
+  50%{
     background-position: 100% 50%;
   }
   100% {
@@ -629,6 +625,20 @@ footer {
 
   to {
     transform: scale(1.2);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    width: 15vh;
+    transform: rotate(0deg);
+  }
+  50%{
+    width: 20vh;
+  }
+  100% {
+    width: 15vh;
+    transform: rotate(359deg);
   }
 }
 
@@ -735,7 +745,7 @@ footer {
             margin-top: 30px;
             display: block;
             height: 3px;
-            background: linear-gradient(250deg, #124bff, #31fbe6, #31fb9a);
+            background: var(--gradient);
             background-size: 300% 300%;
             animation: gradient-line 7s linear infinite;
           }
@@ -868,7 +878,7 @@ footer {
       .map {
         padding: 1px;
         border: 1px solid white;
-        background: linear-gradient(250deg, #124bff, #31fbe6, #31fb9a);
+        background: var(--gradient);
         background-size: 300% 300%;
         animation: gradient-line 7s linear infinite;
         iframe {
@@ -887,7 +897,7 @@ footer {
             padding: 10px;
             border-radius: 10px;
             transform: scale(0.6);
-            background: linear-gradient(250deg, #124bff, #31fbe6, #31fb9a);
+            background: var(--gradient);
             background-size: 300% 300%;
             animation: gradient-line 7s linear infinite;
           }
