@@ -54,9 +54,9 @@ window.addEventListener("load", () => {
   popup.style.display="flex";
   }, 3000);
 
-  document.querySelector(".pop-up-wrapper span").addEventListener('click', () =>{
-    popup.classList.add("vanish");
-  });
+  // document.querySelector(".pop-up-wrapper span").addEventListener('click', () =>{
+  //   popup.classList.add("vanish");
+  // });
 
   document.documentElement.style.setProperty(
     "--animation",

@@ -17,82 +17,6 @@ h1 {
   font-family: 'Big Shoulders Display', cursive;
 }
 
-.pop-up-wrapper {
-  z-index: 1000;
-  position: fixed;
-  inset: 0;
-  display: none;
-  height: 100vh;
-  width: 100%;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background: rgba(0, 0, 0, 0.9);
-}
-
-.pop-up-wrapper .pop-up {
-  border-radius: 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 60vh;
-  width: clamp(10%, 600px, 80%);
-  background-image: url("/blazon/assets/images/curtain.gif");
-  background-repeat: no-repeat;
-  text-align: center;
-  font-weight: 500;
-  color: white;
-  -webkit-animation: popup 1s forwards;
-          animation: popup 1s forwards;
-}
-
-.pop-up-wrapper .pop-up .alert-circle {
-  -webkit-transform: scale(1.5);
-          transform: scale(1.5);
-}
-
-.pop-up-wrapper .pop-up p {
-  margin-top: 50px;
-  font-size: clamp(14px, 3vmax, 28px);
-  border: white 3px solid;
-  padding: 10px;
-  border-radius: 20px;
-  cursor: pointer;
-}
-
-.pop-up-wrapper .pop-up p a {
-  color: white;
-  text-decoration: none;
-}
-
-.pop-up-wrapper .pop-up p:hover {
-  background-color: white;
-}
-
-.pop-up-wrapper .pop-up p:hover a {
-  color: #2cd4c4;
-}
-
-.pop-up-wrapper .pop-up span {
-  font-size: clamp(11px, 1.5vmax, 14px);
-  margin-top: 10px;
-  text-decoration: underline;
-  cursor: pointer;
-}
-
 .preloader {
   z-index: 1000;
   position: fixed;
@@ -403,7 +327,7 @@ section {
   height: 100%;
   z-index: -10;
   position: absolute;
-  background: url(blazon/assets/images/office-space.jpg) no-repeat center center;
+  background: url("blazon/assets/images/office-space.jpg") no-repeat center center;
   background-size: cover;
 }
 
