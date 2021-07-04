@@ -662,6 +662,7 @@ section {
 }
 
 #team .team-info .main-team .main-team-card {
+  width: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -675,6 +676,7 @@ section {
 }
 
 #team .team-info .main-team .main-team-card p {
+  font-weight: 600;
   margin-top: 20px;
 }
 
@@ -1083,10 +1085,14 @@ footer {
     line-height: 58px;
     letter-spacing: 1px;
   }
+  #intro .info .line {
+    width: 70%;
+  }
   #intro .info .tag-info {
     display: none;
   }
   #intro .img-info {
+    margin-top: 20px;
     -ms-flex-item-align: end;
         align-self: flex-end;
     width: 70%;
@@ -1234,9 +1240,21 @@ footer {
             flex-direction: column;
   }
   #team .team-info {
+    width: 100%;
     margin-top: 30px;
   }
+  #team .team-info .main-team .main-team-card p {
+    font-size: 14px;
+  }
+  #team .team-info .main-team .main-team-card span {
+    font-size: 12px;
+  }
+  #team .team-info .main-team .main-team-card .main-img {
+    width: 80px;
+    height: 80px;
+  }
   #team .team-img {
+    width: 100%;
     margin-top: 30px;
     margin-left: 0px;
     display: -webkit-box;
@@ -1244,6 +1262,7 @@ footer {
     display: flex;
   }
   #team .team-img img {
+    margin-top: 10px;
     margin-bottom: 50px;
   }
   #motivation {
