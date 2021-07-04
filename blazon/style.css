@@ -17,6 +17,79 @@ h1 {
   font-family: 'Big Shoulders Display', cursive;
 }
 
+.pop-up-wrapper {
+  z-index: 1000;
+  position: fixed;
+  inset: 0;
+  display: none;
+  height: 100vh;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: rgba(0, 0, 0, 0.9);
+}
+
+.pop-up-wrapper .pop-up {
+  border-radius: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 60vh;
+  width: clamp(10%, 600px, 80%);
+  background-image: url("assets/images/nav.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  text-align: center;
+  font-weight: 600;
+  color: #C19679;
+  -webkit-animation: popup 1s forwards;
+          animation: popup 1s forwards;
+}
+
+.pop-up-wrapper .pop-up p {
+  margin-top: 50px;
+  font-size: clamp(14px, 3vmax, 28px);
+  border: #C19679 3px solid;
+  padding: 10px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.pop-up-wrapper .pop-up p a {
+  color: #C19679;
+  text-decoration: none;
+}
+
+.pop-up-wrapper .pop-up p:hover {
+  background-color: #C19679;
+}
+
+.pop-up-wrapper .pop-up p:hover a {
+  color: white;
+}
+
+.pop-up-wrapper .pop-up span {
+  font-size: clamp(11px, 1.5vmax, 14px);
+  margin-top: 10px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
 .preloader {
   z-index: 1000;
   position: fixed;
@@ -288,6 +361,16 @@ section {
   font-weight: 300;
 }
 
+#intro .info .line {
+  margin-top: 30px;
+  display: block;
+  height: 3px;
+  background: var(--gradient);
+  background-size: 300% 300%;
+  -webkit-animation: gradient-line 3s linear infinite;
+          animation: gradient-line 3s linear infinite;
+}
+
 #intro .info .tag-info {
   margin: 50px 0 0 5px;
   font-size: 16px;
@@ -555,11 +638,12 @@ section {
 }
 
 #team h1 {
+  text-align: center;
   font-size: 50px;
 }
 
 #team .team-info {
-  width: 100%;
+  width: 50%;
 }
 
 #team .team-info p {
@@ -568,7 +652,55 @@ section {
   margin-top: 20px;
 }
 
+#team .team-info .main-team {
+  margin-top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+#team .team-info .main-team .main-team-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#team .team-info .main-team .main-team-card p {
+  margin-top: 20px;
+}
+
+#team .team-info .main-team .main-team-card span {
+  margin-top: 10px;
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+#team .team-info .main-team .main-team-card .main-img {
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#team .team-info .main-team .main-team-card .logo {
+  margin-top: 10px;
+  width: 20px;
+  height: auto;
+  opacity: 0.7;
+}
+
 #team .team-img {
+  width: 50%;
   margin-left: 50px;
   display: -webkit-box;
   display: -ms-flexbox;

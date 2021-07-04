@@ -18,59 +18,58 @@ h1{
 }
 
 // All the Overlays
-// .pop-up-wrapper {
-//   z-index: 1000;
-//   position: fixed;
-//   inset: 0;
-//   display: none;
-//   height: 100vh;
-//   width: 100%;
-//   justify-content: center;
-//   align-items: center;
-//   background: rgba(0, 0, 0, 0.9);
-//   .pop-up {
-//     border-radius: 20px;
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: center;
-//     align-items: center;
-//     height: 60vh;
-//     width: clamp(10%, 600px, 80%);
-//     background-image: url("blazon/assets/images/curtain.gif");
-//     background-repeat: no-repeat;
-//     text-align: center;
-//     font-weight: 500;
-//     color: white;
-//     animation: popup 1s forwards;
-//     .alert-circle {
-//       transform: scale(1.5);
-//     }
-//     p {
-//       margin-top: 50px;
-//       font-size: clamp(14px, 3vmax, 28px);
-//       border: white 3px solid;
-//       padding: 10px;
-//       border-radius: 20px;
-//       cursor: pointer;
-//       a{
-//         color: white;
-//         text-decoration: none;
-//       }
-//       &:hover {
-//         background-color: white;
-//       }
-//       &:hover a {
-//         color: #2cd4c4;
-//       }
-//     }
-//     span {
-//       font-size: clamp(11px, 1.5vmax, 14px);
-//       margin-top: 10px;
-//       text-decoration: underline;
-//       cursor: pointer;
-//     }
-//   }
-// }
+.pop-up-wrapper {
+  z-index: 1000;
+  position: fixed;
+  inset: 0;
+  display: none;
+  height: 100vh;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.9);
+  .pop-up {
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+    width: clamp(10%, 600px, 80%);
+    background-image: url("assets/images/nav.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    text-align: center;
+    font-weight: 600;
+    color: #C19679;
+    animation: popup 1s forwards;
+    p {
+      margin-top: 50px;
+      font-size: clamp(14px, 3vmax, 28px);
+      border: #C19679 3px solid;
+      padding: 10px;
+      border-radius: 20px;
+      cursor: pointer;
+      a{
+        color: #C19679;
+        text-decoration: none;
+      }
+      &:hover {
+        background-color: #C19679;
+      }
+      &:hover a {
+        color: white;
+      }
+    }
+    span {
+      font-size: clamp(11px, 1.5vmax, 14px);
+      margin-top: 10px;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+}
 
 .preloader {
   z-index: 1000;
@@ -256,6 +255,14 @@ section {
         font-weight: 300;
       }
     }
+    .line {
+      margin-top: 30px;
+      display: block;
+      height: 3px;
+      background: var(--gradient);
+      background-size: 300% 300%;
+      animation: gradient-line 3s linear infinite;
+    }
     .tag-info {
       margin: 50px 0 0 5px;
       font-size: 16px;
@@ -433,6 +440,7 @@ section {
 
 #team {
   h1 {
+    text-align: center;
     font-size: 50px;
   }
   background-color: black;
@@ -441,14 +449,45 @@ section {
   justify-content: space-between;
   align-items: center;
   .team-info {
-    width: 100%;
+    width: 50%;
     p {
       font-weight: 300;
       color: rgb(211, 211, 211);
       margin-top: 20px;
     }
+    .main-team{
+      margin-top: 50px;
+      display: flex;
+      justify-content: space-around;
+      .main-team-card{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        p{
+          margin-top: 20px;
+        }
+        span{
+          margin-top: 10px;
+          font-size: 14px;
+          opacity: 0.7;
+        }
+        .main-img{
+          border-radius: 50%;
+          width: 120px;
+          height: 120px;
+          object-fit: cover;
+        }
+        .logo{
+          margin-top: 10px;
+          width: 20px;
+          height: auto;
+          opacity: 0.7;
+        }
+      }
+    }
   }
   .team-img {
+    width: 50%;
     margin-left: 50px;
     display: flex;
     justify-content: center;
