@@ -50,28 +50,27 @@ h1 {
           align-items: center;
   height: 60vh;
   width: clamp(10%, 600px, 80%);
-  background-image: url("assets/images/nav.jpg");
+  background-image: url("assets/images/nav.gif");
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
   text-align: center;
   font-weight: 600;
-  color: #C19679;
   -webkit-animation: popup 1s forwards;
           animation: popup 1s forwards;
 }
 
 .pop-up-wrapper .pop-up p {
+  background-color: #C19679;
   margin-top: 50px;
   font-size: clamp(14px, 3vmax, 28px);
-  border: #C19679 3px solid;
-  padding: 10px;
+  padding: 20px;
   border-radius: 20px;
   cursor: pointer;
 }
 
 .pop-up-wrapper .pop-up p a {
-  color: #C19679;
+  color: white;
   text-decoration: none;
 }
 
@@ -80,13 +79,17 @@ h1 {
 }
 
 .pop-up-wrapper .pop-up p:hover a {
-  color: white;
+  text-shadow: grey 2px 2px 2px;
 }
 
 .pop-up-wrapper .pop-up span {
+  text-shadow: grey 2px 2px 2px;
+  padding: 5px;
+  color: white;
+  border: #C19679 solid 3px;
   font-size: clamp(11px, 1.5vmax, 14px);
   margin-top: 10px;
-  text-decoration: underline;
+  border-radius: 15px;
   cursor: pointer;
 }
 
@@ -757,6 +760,8 @@ section {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
 }
 
 #motivation .clients-images img {
