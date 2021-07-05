@@ -570,6 +570,10 @@ section {
   padding: 50px;
 }
 
+#services .services-info {
+  text-align: center;
+}
+
 #services .services-info h1 {
   font-size: 50px;
 }
