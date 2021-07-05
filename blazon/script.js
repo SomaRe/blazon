@@ -70,7 +70,15 @@ window.addEventListener("load", () => {
   }
 
   function runistopeLayout() {
+    var grid1 = document.querySelector(".clients-images");
     var grid2 = document.querySelector(".gallery-container");
+    var iso1 = new Isotope(grid1,{
+      layoutMode: "fitRows",
+      itemSelector: ".grid-item",
+      fitRows:{
+        gutter: 0,
+      },
+    });
     var iso2 = new Isotope(grid2, {
       // options...
       itemSelector: ".wrapper",
@@ -78,6 +86,9 @@ window.addEventListener("load", () => {
       masonry: {
         columnWidth: ".grid-sizer",
       },
+    });
+    imagesLoaded(grid1).on("progress",function(){
+      iso1.layout();
     });
     imagesLoaded(grid2).on("progress", function () {
       // layout Isotope after each image loads
