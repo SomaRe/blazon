@@ -650,6 +650,7 @@ section {
 }
 
 #team .team-info p {
+  text-align: center;
   font-weight: 300;
   color: lightgray;
   margin-top: 20px;
