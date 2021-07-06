@@ -241,6 +241,16 @@ nav {
         text-decoration: none;
         color: white;
       }
+      &:last-child{
+        button{
+          all:unset;
+          cursor: pointer;
+          color: white;
+        padding: 10px 20px;
+        background-image: linear-gradient(to right, #13424c, #164e59, #185a65, #1b6672, #1d737f, #217b7e, #2c827b, #3b8977);
+        border-radius: 10px;
+    }
+  }
     }
   }
 }

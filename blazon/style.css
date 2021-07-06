@@ -262,6 +262,16 @@ nav .menu-btn.open .menu-btn__burger::after {
   color: white;
 }
 
+.nav-mobile ul li:last-child button {
+  all: unset;
+  cursor: pointer;
+  color: white;
+  padding: 10px 20px;
+  background-image: -webkit-gradient(linear, left top, right top, from(#13424c), color-stop(#164e59), color-stop(#185a65), color-stop(#1b6672), color-stop(#1d737f), color-stop(#217b7e), color-stop(#2c827b), to(#3b8977));
+  background-image: linear-gradient(to right, #13424c, #164e59, #185a65, #1b6672, #1d737f, #217b7e, #2c827b, #3b8977);
+  border-radius: 10px;
+}
+
 .open {
   -webkit-clip-path: circle(200% at calc(100% - 45px) 5%);
           clip-path: circle(200% at calc(100% - 45px) 5%);
