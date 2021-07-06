@@ -1,4 +1,4 @@
-const popup = document.querySelector(".pop-up-wrapper");
+// const popup = document.querySelector(".pop-up-wrapper");
 
 const menuBtn = document.querySelector(".menu-btn");
 const menuOpen = document.querySelector(".nav-mobile");
@@ -13,17 +13,16 @@ menuBtn.addEventListener("click", () => {
   } else {
     Open = false;
     menuBtn.classList.remove("open");
-    menuOpen.classList.remove("open")
+    menuOpen.classList.remove("open");
   }
 });
 
-mobileLinks.forEach( el => {
+mobileLinks.forEach((el) => {
   el.addEventListener("click", () => {
     menuBtn.classList.remove("open");
     menuOpen.classList.remove("open");
-  })
+  });
 });
-
 
 //smooth scrolling desktop
 const links = document.querySelectorAll("nav ul li a");
@@ -47,16 +46,17 @@ function clickHandler(e) {
   });
 }
 window.addEventListener("load", () => {
-
   document.querySelector(".fullpage-preloader").classList.add("vanish");
 
-  setTimeout(() => {
-  popup.style.display="flex";
-  }, 3000);
+  // setTimeout(() => {
+  //   popup.style.display = "flex";
+  // }, 3000);
 
-  document.querySelector(".pop-up-wrapper span").addEventListener('click', () =>{
-    popup.classList.add("vanish");
-  });
+  // document
+  //   .querySelector(".pop-up-wrapper span")
+  //   .addEventListener("click", () => {
+  //     popup.classList.add("vanish");
+  //   });
 
   document.documentElement.style.setProperty(
     "--animation",
@@ -72,10 +72,10 @@ window.addEventListener("load", () => {
   function runistopeLayout() {
     var grid1 = document.querySelector(".clients-images");
     var grid2 = document.querySelector(".gallery-container");
-    var iso1 = new Isotope(grid1,{
+    var iso1 = new Isotope(grid1, {
       layoutMode: "fitRows",
       itemSelector: ".grid-item",
-      fitRows:{
+      fitRows: {
         gutter: 0,
       },
     });
@@ -87,7 +87,7 @@ window.addEventListener("load", () => {
         columnWidth: ".grid-sizer",
       },
     });
-    imagesLoaded(grid1).on("progress",function(){
+    imagesLoaded(grid1).on("progress", function () {
       iso1.layout();
     });
     imagesLoaded(grid2).on("progress", function () {

@@ -17,82 +17,6 @@ h1 {
   font-family: 'Big Shoulders Display', cursive;
 }
 
-.pop-up-wrapper {
-  z-index: 1000;
-  position: fixed;
-  inset: 0;
-  display: none;
-  height: 100vh;
-  width: 100%;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background: rgba(0, 0, 0, 0.9);
-}
-
-.pop-up-wrapper .pop-up {
-  border-radius: 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 60vh;
-  width: clamp(10%, 600px, 80%);
-  background-image: url("assets/images/nav.gif");
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  text-align: center;
-  font-weight: 600;
-  -webkit-animation: popup 1s forwards;
-          animation: popup 1s forwards;
-}
-
-.pop-up-wrapper .pop-up p {
-  background-color: #C19679;
-  margin-top: 50px;
-  font-size: clamp(14px, 3vmax, 28px);
-  padding: 20px;
-  border-radius: 20px;
-  cursor: pointer;
-}
-
-.pop-up-wrapper .pop-up p a {
-  color: white;
-  text-decoration: none;
-}
-
-.pop-up-wrapper .pop-up p:hover {
-  background-color: #C19679;
-}
-
-.pop-up-wrapper .pop-up p:hover a {
-  text-shadow: grey 2px 2px 2px;
-}
-
-.pop-up-wrapper .pop-up span {
-  text-shadow: grey 2px 2px 2px;
-  padding: 5px;
-  color: white;
-  border: #C19679 solid 3px;
-  font-size: clamp(11px, 1.5vmax, 14px);
-  margin-top: 10px;
-  border-radius: 15px;
-  cursor: pointer;
-}
-
 .preloader {
   z-index: 1000;
   position: fixed;
@@ -203,6 +127,9 @@ nav ul {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   list-style: none;
   font-size: 14px;
   font-weight: 500;
@@ -215,6 +142,16 @@ nav ul li {
 nav ul li a {
   color: black;
   text-decoration: none;
+}
+
+nav ul li:last-child button {
+  all: unset;
+  cursor: pointer;
+  color: white;
+  padding: 10px 20px;
+  background-image: -webkit-gradient(linear, left top, right top, from(#13424c), color-stop(#164e59), color-stop(#185a65), color-stop(#1b6672), color-stop(#1d737f), color-stop(#217b7e), color-stop(#2c827b), to(#3b8977));
+  background-image: linear-gradient(to right, #13424c, #164e59, #185a65, #1b6672, #1d737f, #217b7e, #2c827b, #3b8977);
+  border-radius: 10px;
 }
 
 nav .menu-btn {
