@@ -85,7 +85,7 @@ h1 {
 nav {
   z-index: 100;
   position: fixed;
-  top: 0;
+  inset: 0;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -214,11 +214,8 @@ nav .menu-btn.open .menu-btn__burger::after {
 
 .nav-mobile {
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 100vh;
+  inset: 0;
+  height: 100%;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
