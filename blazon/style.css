@@ -228,8 +228,8 @@ nav .menu-btn.open .menu-btn__burger::after {
   -webkit-animation: bg-color 5s linear infinite;
           animation: bg-color 5s linear infinite;
   z-index: 10;
-  -webkit-clip-path: circle(1px at calc(100% - 45px) 5%);
-          clip-path: circle(1px at calc(100% - 45px) 5%);
+  -webkit-clip-path: circle(1px at 90% 5%);
+          clip-path: circle(1px at 90% 5%);
   -webkit-transition: -webkit-clip-path 0.5s ease-out;
   transition: -webkit-clip-path 0.5s ease-out;
   transition: clip-path 0.5s ease-out;
@@ -271,8 +271,8 @@ nav .menu-btn.open .menu-btn__burger::after {
 }
 
 .open {
-  -webkit-clip-path: circle(200% at calc(100% - 45px) 5%);
-          clip-path: circle(200% at calc(100% - 45px) 5%);
+  -webkit-clip-path: circle(200% at 90% 5%);
+          clip-path: circle(200% at 90% 5%);
 }
 
 section {
