@@ -1,25 +1,144 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    color: white;
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;300;400;500&display=swap');
+
+@font-face {
+    font-family: indian;
+    src: url(assets/Ananda_Namaste_Regular.ttf);
 }
 
-.image{
+*{
+    margin: 0;
+}
+
+html{
+    scroll-snap-type: y mandatory;
+}
+
+body{
+    color: white;
+    font-family: 'Roboto Mono', monospace;
+    background-color: rgb(23,31,40);
+}
+
+.pattern{
+    z-index: 1000;
+    position: fixed;
+    background-size: contain;
+    height: 40px;
+    width: 100%;
+    background-repeat: repeat-x;
+    background-image: url("assets/images/border-pattern.png");
+}
+
+.top-pattern{
+    top: calc(50vh - 40px);
+    animation-name: intro-top;
+    animation-delay: 1s;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+.bottom-pattern{
+    bottom: calc(50vh - 40px);
+    animation-name: intro-bottom;
+    animation-delay: 1s;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    transform: rotate(180deg);
+}
+
+.section{
+    min-height: 100vh;
+    scroll-snap-align: center;
+}
+
+.section1{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    padding: 25px;
-    transform: scale(0.5);
     img{
-        width: 100%;
-        height: auto;
+        height: 40vh;
+        transform: scale(0);
+        animation-name: logo-popup;
+        animation-delay: 1s;
+        animation-duration: 2s;
+        animation-fill-mode: forwards;
+    }
+    
+}
+
+.section2{
+    display: flex;
+    align-items: center;
+    .row1{
+        display: flex;
+        align-items: center;
+        .col1{
+            p{
+                font-family: indian;
+                color: rgb(207,161,107);
+                transform: rotate(-90deg);
+                font-size: 60px;
+        }
+    }
+    .col2{
+        padding: 0 20px 0 0;
+        & p:nth-child(3){
+            font-style: italic;
+            font-weight: bold;
+        }
+        }
     }
 }
 
-@media only screen and (max-width: 768px) {
-.image{
+// Animations
+@keyframes intro-top {
+    from{
+        top : calc(50vh - 40px);
+    }
+    to{
+        top: 0;
+    }
+}
+
+@keyframes intro-bottom {
+    from{
+        bottom : calc(50vh - 40px);
+    }
+    to{
+        bottom: 0;
+    }
+}
+
+@keyframes logo-popup {
+    from{
+        transform: scale(0);
+    }
+    to{
         transform: scale(1);
+    }
+}
+
+@media only screen and (max-width: 768px){
+    html{
+        scroll-snap-type:none;
+    }
+    .section2{
+        .row1{
+            flex-direction: column;
+            .col1{
+                p{
+                    font-family: indian;
+                    color: rgb(207,161,107);
+                    transform: rotate(0deg);
+            }
+        }
+        .col2{
+            text-align: justify;
+            padding: 40px;
+            font-size: 15px;
+            & p:nth-child(3){
+                font-weight: bold;
+            }
+            }
+        }
     }
 }

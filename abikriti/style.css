@@ -1,12 +1,66 @@
-* {
-  margin: 0;
-  padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  color: white;
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;300;400;500&display=swap");
+@font-face {
+  font-family: indian;
+  src: url(assets/Ananda_Namaste_Regular.ttf);
 }
 
-.image {
+* {
+  margin: 0;
+}
+
+html {
+  -ms-scroll-snap-type: y mandatory;
+      scroll-snap-type: y mandatory;
+}
+
+body {
+  color: white;
+  font-family: 'Roboto Mono', monospace;
+  background-color: #171f28;
+}
+
+.pattern {
+  z-index: 1000;
+  position: fixed;
+  background-size: contain;
+  height: 40px;
+  width: 100%;
+  background-repeat: repeat-x;
+  background-image: url("assets/images/border-pattern.png");
+}
+
+.top-pattern {
+  top: calc(50vh - 40px);
+  -webkit-animation-name: intro-top;
+          animation-name: intro-top;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.bottom-pattern {
+  bottom: calc(50vh - 40px);
+  -webkit-animation-name: intro-bottom;
+          animation-name: intro-bottom;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.section {
+  min-height: 100vh;
+  scroll-snap-align: center;
+}
+
+.section1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -16,21 +70,139 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 100vh;
-  padding: 25px;
-  -webkit-transform: scale(0.5);
-          transform: scale(0.5);
 }
 
-.image img {
-  width: 100%;
-  height: auto;
+.section1 img {
+  height: 40vh;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-animation-name: logo-popup;
+          animation-name: logo-popup;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.section2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.section2 .row1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.section2 .row1 .col1 p {
+  font-family: indian;
+  color: #cfa16b;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  font-size: 60px;
+}
+
+.section2 .row1 .col2 {
+  padding: 0 20px 0 0;
+}
+
+.section2 .row1 .col2 p:nth-child(3) {
+  font-style: italic;
+  font-weight: bold;
+}
+
+@-webkit-keyframes intro-top {
+  from {
+    top: calc(50vh - 40px);
+  }
+  to {
+    top: 0;
+  }
+}
+
+@keyframes intro-top {
+  from {
+    top: calc(50vh - 40px);
+  }
+  to {
+    top: 0;
+  }
+}
+
+@-webkit-keyframes intro-bottom {
+  from {
+    bottom: calc(50vh - 40px);
+  }
+  to {
+    bottom: 0;
+  }
+}
+
+@keyframes intro-bottom {
+  from {
+    bottom: calc(50vh - 40px);
+  }
+  to {
+    bottom: 0;
+  }
+}
+
+@-webkit-keyframes logo-popup {
+  from {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes logo-popup {
+  from {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
 }
 
 @media only screen and (max-width: 768px) {
-  .image {
-    -webkit-transform: scale(1);
-            transform: scale(1);
+  html {
+    -ms-scroll-snap-type: none;
+        scroll-snap-type: none;
+  }
+  .section2 .row1 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .section2 .row1 .col1 p {
+    font-family: indian;
+    color: #cfa16b;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  .section2 .row1 .col2 {
+    text-align: justify;
+    padding: 40px;
+    font-size: 15px;
+  }
+  .section2 .row1 .col2 p:nth-child(3) {
+    font-weight: bold;
   }
 }
 /*# sourceMappingURL=style.css.map */
