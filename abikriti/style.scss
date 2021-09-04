@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Satisfy&display=swap");
 
 @font-face {
   font-family: indian;
@@ -10,13 +11,11 @@
 }
 
 html {
-  scroll-snap-type: y mandatory;
-}
-
-body {
   color: white;
-  font-family: "Roboto Mono", monospace;
   background-color: rgb(23, 31, 40);
+  //font-family: 'Style Script', cursive;
+  font-family: "Satisfy", cursive;
+  scroll-snap-type: y mandatory;
 }
 
 .pattern {
@@ -46,15 +45,17 @@ body {
 }
 
 .section {
+  //font-size: 20px;
   min-height: 100vh;
   scroll-snap-align: center;
   display: flex;
   align-items: center;
   .row {
+    width: 100%;
     display: flex;
     align-items: center;
-    .col1{
-        max-width: 20%;
+    .col1 {
+      max-width: 20%;
     }
     .title {
       font-family: indian;
@@ -83,6 +84,8 @@ body {
 
 .section2 {
   .col2 {
+    font-size: 18px;
+    letter-spacing: 1px;
     padding: 0 20px 0 0;
     & p:nth-child(3) {
       font-style: italic;
@@ -94,33 +97,155 @@ body {
 .section3 {
   .col1 {
     text-align: center;
-    .title{
-        transform: rotate(-90deg) translateX(-50px);
+    .title {
+      transform: rotate(-90deg) translateX(-50px);
     }
   }
   .col2 {
+    font-size: 16px;
+    letter-spacing: 1px;
     display: flex;
     flex-direction: column;
     align-items: center;
     .sb {
-        display: flex;
-        align-items: center;
-        .sb_text{
-            padding: 20px;
-            max-width: 30%;
-            &.text1{
-                text-align: right;
-            }
+      display: flex;
+      align-items: center;
+      .sb_text {
+        padding: 20px;
+        max-width: 30%;
+        &.text1 {
+          text-align: right;
         }
-        img{
-      height: 40vh;
-      width: auto;
-      border: 5px solid rgb(207,161,107);
-    }
-    &.sb2{
+      }
+      img {
+        height: 38vh;
+        width: auto;
+        border: 5px solid rgb(207, 161, 107);
+      }
+      &.sb2 {
         margin-top: 15px;
+      }
+    }
+  }
+}
+
+.section4 {
+  .col1 {
+    text-align: center;
+    .title {
+      transform: rotate(-90deg);
+    }
+  }
+  .col2 {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    .sb_text {
+      padding: 20px;
+      max-width: 70%;
+      &.text1 {
+        text-align: left;
+      }
+    }
+    img {
+      height: 45vh;
+      width: auto;
+      border: 5px solid rgb(207, 161, 107);
+    }
+  }
+}
+
+.section5 {
+  .row{
+    height: 100vh;
+  }
+  .col1 {
+    text-align: center;
+  }
+  .col2 {
+    display: flex;
+    .gallery{
+      width: 100%;
+  .gallery-container {
+    .grid-sizer,
+    .wrapper {
+      width: 30%;
+      margin: 0 0 1% 1%;
+      .glightbox {
+        img {
+          width: 100%;
+          height: auto;
+          border-radius: 3%;
+        }
+      }
+    }
+  }
+  .load-more{
+    cursor: pointer;
+    display: flex;
+   justify-content:center ;
+    p{
+      padding: 10px;
+    border: white 2px solid;
+    border-radius: 10px;
+    transition:  0.5s;
+  
+  &:hover{
+      background-color: white;
+      color: black;
+    }
     }
 }
+}
+  .categories{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    align-items: center;
+    justify-content: center;
+    h2{
+      margin-bottom: 30px;
+      text-decoration: underline;
+    }
+    li {
+      display: flex;
+      flex-wrap: wrap;
+      font-size: 13px;
+      justify-content: space-around;
+      margin-bottom: 40px;
+      list-style: none;
+      ul {
+        width: 150px;
+        cursor: pointer;
+        padding: 5px 10px;
+        margin: 5px 0;
+        text-align: center;
+        border: 2px solid white;
+        border-radius: 5px;
+        transition:  0.5s;
+        &:hover{
+          background-color: white;
+          color: black;
+        }
+      }
+    }
+  }
+  }
+}
+
+footer {
+  .col1 {
+    text-align: center;
+    .title {
+      transform: rotate(-90deg) translateX(-50px);
+    }
+  }
+  .col2 {
+    font-size: 16px;
+    letter-spacing: 1px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
 
@@ -165,8 +290,8 @@ body {
       display: flex;
       flex-direction: column;
       align-items: center;
-      .col1{
-          max-width: 100%;
+      .col1 {
+        max-width: 100%;
       }
       .title {
         transform: rotate(0deg);
@@ -175,7 +300,7 @@ body {
       }
     }
   }
-  
+
   .section2 {
     .col2 {
       padding: 20px 50px;
@@ -188,40 +313,90 @@ body {
   }
 
   .section3 {
-      margin-top: 50px;
-      .row{
+    margin-top: 30px;
+    .row {
       width: 100%;
-    .col1 {
-      text-align: center;
-      margin-bottom: 30px;
-    }
-    .col2 {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      .sb {
+      .col1 {
+        text-align: center;
+        margin-bottom: 30px;
+      }
+      .col2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .sb {
           display: flex;
           flex-direction: column;
           align-items: center;
-          .sb_text{
-              padding: 20px;
-              max-width: 100%;
-              text-align: center;
+          .sb_text {
+            padding: 20px;
+            max-width: 100%;
+            text-align: center;
           }
-          img{
-        height: auto;
-        width: 80%;
-        border: 5px solid rgb(207,161,107);
+          img {
+            height: auto;
+            width: 80%;
+            border: 5px solid rgb(207, 161, 107);
+          }
+          &.sb1 {
+            flex-direction: column-reverse;
+          }
+          &.sb2 {
+            margin-top: 15px;
+          }
+        }
       }
-      &.sb1{
-          flex-direction: column-reverse;
-      }
-      &.sb2{
-          margin-top: 15px;
-      }
-  }
-}
     }
   }
 
+  .section4{
+    min-height: 60vh;
+    .row{
+    justify-content: space-around;
+    .col1{
+      margin-bottom: 20px;
+    }
+    .col2{
+      flex-direction: column;
+      img{
+      margin-bottom: 20px;
+        height: 25vh;
+      }
+      .sb_text{
+        padding: 20px;
+        max-width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+    }
+  }
+  }
+  .section5{
+    .row{
+      .col1{
+        margin: 20px 0 20px;
+      }
+      .col2{
+        flex-direction: column;
+        .gallery{
+          padding: 2%;
+          .gallery-container{
+            .grid-sizer, .wrapper{
+              width: 30%;
+              margin: 1%;
+            }
+          }
+        }
+        .load-more{
+          margin:20px 0 ;
+        }
+        .categories{
+          h2{
+            margin-top: 20px;
+          }
+          width: 100%;
+        }
+      }
+    }
+  }
 }

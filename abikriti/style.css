@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Satisfy&display=swap");
 @font-face {
   font-family: indian;
   src: url(assets/Ananda_Namaste_Regular.ttf);
@@ -9,14 +10,11 @@
 }
 
 html {
+  color: white;
+  background-color: #171f28;
+  font-family: "Satisfy", cursive;
   -ms-scroll-snap-type: y mandatory;
       scroll-snap-type: y mandatory;
-}
-
-body {
-  color: white;
-  font-family: "Roboto Mono", monospace;
-  background-color: #171f28;
 }
 
 .pattern {
@@ -67,6 +65,7 @@ body {
 }
 
 .section .row {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -116,6 +115,8 @@ body {
 }
 
 .section2 .col2 {
+  font-size: 18px;
+  letter-spacing: 1px;
   padding: 0 20px 0 0;
 }
 
@@ -134,6 +135,8 @@ body {
 }
 
 .section3 .col2 {
+  font-size: 16px;
+  letter-spacing: 1px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -165,13 +168,177 @@ body {
 }
 
 .section3 .col2 .sb img {
-  height: 40vh;
+  height: 38vh;
   width: auto;
   border: 5px solid #cfa16b;
 }
 
 .section3 .col2 .sb.sb2 {
   margin-top: 15px;
+}
+
+.section4 .col1 {
+  text-align: center;
+}
+
+.section4 .col1 .title {
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
+.section4 .col2 {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.section4 .col2 .sb_text {
+  padding: 20px;
+  max-width: 70%;
+}
+
+.section4 .col2 .sb_text.text1 {
+  text-align: left;
+}
+
+.section4 .col2 img {
+  height: 45vh;
+  width: auto;
+  border: 5px solid #cfa16b;
+}
+
+.section5 .row {
+  height: 100vh;
+}
+
+.section5 .col1 {
+  text-align: center;
+}
+
+.section5 .col2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.section5 .col2 .gallery {
+  width: 100%;
+}
+
+.section5 .col2 .gallery .gallery-container .grid-sizer,
+.section5 .col2 .gallery .gallery-container .wrapper {
+  width: 30%;
+  margin: 0 0 1% 1%;
+}
+
+.section5 .col2 .gallery .gallery-container .grid-sizer .glightbox img,
+.section5 .col2 .gallery .gallery-container .wrapper .glightbox img {
+  width: 100%;
+  height: auto;
+  border-radius: 3%;
+}
+
+.section5 .col2 .gallery .load-more {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.section5 .col2 .gallery .load-more p {
+  padding: 10px;
+  border: white 2px solid;
+  border-radius: 10px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.section5 .col2 .gallery .load-more p:hover {
+  background-color: white;
+  color: black;
+}
+
+.section5 .col2 .categories {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 80%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.section5 .col2 .categories h2 {
+  margin-bottom: 30px;
+  text-decoration: underline;
+}
+
+.section5 .col2 .categories li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  font-size: 13px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-bottom: 40px;
+  list-style: none;
+}
+
+.section5 .col2 .categories li ul {
+  width: 150px;
+  cursor: pointer;
+  padding: 5px 10px;
+  margin: 5px 0;
+  text-align: center;
+  border: 2px solid white;
+  border-radius: 5px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.section5 .col2 .categories li ul:hover {
+  background-color: white;
+  color: black;
+}
+
+footer .col1 {
+  text-align: center;
+}
+
+footer .col1 .title {
+  -webkit-transform: rotate(-90deg) translateX(-50px);
+          transform: rotate(-90deg) translateX(-50px);
+}
+
+footer .col2 {
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 @-webkit-keyframes intro-top {
@@ -277,7 +444,7 @@ body {
     font-weight: bold;
   }
   .section3 {
-    margin-top: 50px;
+    margin-top: 30px;
   }
   .section3 .row {
     width: 100%;
@@ -328,6 +495,57 @@ body {
   }
   .section3 .row .col2 .sb.sb2 {
     margin-top: 15px;
+  }
+  .section4 {
+    min-height: 60vh;
+  }
+  .section4 .row {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .section4 .row .col1 {
+    margin-bottom: 20px;
+  }
+  .section4 .row .col2 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .section4 .row .col2 img {
+    margin-bottom: 20px;
+    height: 25vh;
+  }
+  .section4 .row .col2 .sb_text {
+    padding: 20px;
+    max-width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .section5 .row .col1 {
+    margin: 20px 0 20px;
+  }
+  .section5 .row .col2 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .section5 .row .col2 .gallery {
+    padding: 2%;
+  }
+  .section5 .row .col2 .gallery .gallery-container .grid-sizer, .section5 .row .col2 .gallery .gallery-container .wrapper {
+    width: 30%;
+    margin: 1%;
+  }
+  .section5 .row .col2 .load-more {
+    margin: 20px 0;
+  }
+  .section5 .row .col2 .categories {
+    width: 100%;
+  }
+  .section5 .row .col2 .categories h2 {
+    margin-top: 20px;
   }
 }
 /*# sourceMappingURL=style.css.map */
