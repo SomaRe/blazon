@@ -4,6 +4,7 @@
         "clip",
         "countjpg",
         "countpng",
+        "curatedframes",
         "webkit"
     ],
     "liveServer.settings.port": 5501,

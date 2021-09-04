@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;300;400;500&display=swap");
+// @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;300;400;500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Satisfy&display=swap");
 
 @font-face {
@@ -215,6 +215,9 @@ html {
       margin-bottom: 40px;
       list-style: none;
       ul {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         width: 150px;
         cursor: pointer;
         padding: 5px 10px;
@@ -360,7 +363,8 @@ footer {
       flex-direction: column;
       img{
       margin-bottom: 20px;
-        height: 25vh;
+        width: 80%;
+        height: auto;
       }
       .sb_text{
         padding: 20px;
@@ -379,7 +383,7 @@ footer {
       .col2{
         flex-direction: column;
         .gallery{
-          padding: 2%;
+          padding: 1%;
           .gallery-container{
             .grid-sizer, .wrapper{
               width: 30%;
