@@ -128,7 +128,7 @@ function createHtml(id, obj) {
 
         var link = document.createElement("a");
         link.classList.add("glightbox");
-        link.loc = obj.loc + i + obj.locCountArr[j][1];
+        link.href = obj.loc + i + obj.locCountArr[j][1];
         imgBox.appendChild(link);
 
         var imgTag = document.createElement("img");
